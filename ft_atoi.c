@@ -29,7 +29,7 @@ int	ft_atoi(const char *nptr)
 
 	sign = 1;
 	i = skip_isspace(nptr);
-	if (!ft_isdigit((int)nptr[i]))
+	if (!ft_isdigit((int)nptr[i]) && (nptr[i] == '-' || nptr[i] == '+'))
 	{
 		if (nptr[i] == '-')
 		{
