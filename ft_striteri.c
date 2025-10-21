@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 10:39:53 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/19 16:40:40 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:07:15 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	ptr = s;
 	i = 0;
-	if (!ptr)
+	if (!ptr || !f)
 		return ;
 	while (*ptr)
-	{
 		f(i++, ptr++);
-	}
 }

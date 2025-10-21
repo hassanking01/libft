@@ -6,23 +6,21 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:02:20 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/19 16:38:47 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:33:42 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 #include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	char	*ptr;
-	size_t	len;
+	size_t	i;
 
-	len = ft_strlen(s);
-	if (fd < 0)
-		return ;
-	ptr = s;
-	while (*ptr)
+	i = 0;
+	while (s[i])
 	{
-		write(fd, ptr++, len);
+		write(fd, &s[i], 1);
+		i++;
 	}
 }
