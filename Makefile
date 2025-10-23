@@ -1,4 +1,5 @@
-CFLAG = -Wall -Wextra -Werror -I.
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I.
 NAME = libft.a
 SRC = ft_atoi.c ft_itoa.c ft_putnbr_fd.c ft_strlcpy.c ft_tolower.c \
       ft_bzero.c ft_memchr.c ft_putstr_fd.c ft_strlen.c ft_toupper.c \
@@ -15,14 +16,15 @@ AR = ar -rcs
 RM = rm -rf
 OBJS = $(SRC:.c=.o)
 OBJS_BONUS = $(SRC_BONUS:.c=.o)
-
+O_name = bonus
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-bonus: $(OBJS_BONUS)
+$(O_name): $(OBJS_BONUS)
 	$(AR) $(NAME) $(OBJS_BONUS)
+	@touch bonus
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)

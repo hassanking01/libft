@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:55:22 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/22 12:42:16 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:25:16 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -89,7 +89,6 @@ void	fill_array(char **ptr, const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
-	size_t	i;
 	size_t	count;
 
 	if (!(*s))
@@ -98,7 +97,6 @@ char	**ft_split(char const *s, char c)
 		ptr[0] = NULL;
 		return (ptr);
 	}
-	i = 0;
 	count = count_words(s, c);
 	ptr = malloc((count + 1) * sizeof(char *));
 	if (!ptr)
