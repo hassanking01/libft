@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 22:35:13 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/21 17:18:38 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/23 18:03:00 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	if (!(*lst))
+	ptr = *lst;
+	if (!ptr)
 	{
 		*lst = new;
 		return ;
 	}
-	ptr = *lst;
 	while (ptr->next)
 	{
 		ptr = ptr->next;

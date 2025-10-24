@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 13:31:10 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/19 18:02:22 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:28:08 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_toupper(int c)
@@ -15,8 +15,5 @@ int	ft_toupper(int c)
 	{
 		return (c - 32);
 	}
-	else
-	{
-		return (c);
-	}
+	return (c);
 }

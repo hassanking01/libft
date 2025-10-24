@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:18:31 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/22 12:09:13 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:49:22 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -48,16 +48,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 	size_t	i;
 	size_t	j;
-	size_t	s_len;
 
-	s_len = ft_strlen(s1);
-	j = 0;
 	if (!s1 || !set)
 		return (NULL);
+	i = ft_strlen(s1);
 	j = 0;
-	while (j < s_len && is_from_set(set, s1[j]))
+	while (j < i && is_from_set(set, s1[j]))
 		j++;
-	i = s_len;
 	while (i > j && is_from_set(set, s1[i -1]))
 		i--;
 	ptr = ft_strndup(&s1[j], i - j);

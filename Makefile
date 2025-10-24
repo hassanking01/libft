@@ -30,7 +30,7 @@ clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME)	$(O_name)
 
 re: fclean all
 
