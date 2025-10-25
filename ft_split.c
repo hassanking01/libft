@@ -6,19 +6,21 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:55:22 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/23 18:32:30 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/25 13:59:31 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 #include <stddef.h>
 #include <stdlib.h>
 
-char	*ft_strndup(const char *s, size_t	n)
+static char	*ft_strndup(const char *s, size_t	n)
 {
 	size_t	i;
 	char	*ptr;
 
 	ptr = malloc(n + 1);
+	if (!ptr)
+		return (NULL);
 	i = 0;
 	while (s[i] && i < n)
 	{
@@ -29,7 +31,7 @@ char	*ft_strndup(const char *s, size_t	n)
 	return (ptr);
 }
 
-size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	int		is_added;
 	size_t	i;
@@ -57,7 +59,17 @@ size_t	count_words(const char *s, char c)
 	return (count);
 }
 
-void	fill_array(char **ptr, const char *s, char c)
+static int	free_array(char **ptr)
+{
+	size_t	i;
+
+	i = 0;
+	while (ptr[i])
+		free(ptr[i++]);
+	return (0);
+}
+
+static int	fill_array(char **ptr, const char *s, char c)
 {
 	size_t	i;
 	size_t	ptr_i;
@@ -65,18 +77,16 @@ void	fill_array(char **ptr, const char *s, char c)
 
 	ptr_i = 0;
 	i = 0;
-	while (s[i] == c)
-		i++;
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
 			count_n = 0;
 			while ((s[i + count_n] != c) && s[i + count_n])
-			{
 				count_n++;
-			}
 			ptr[ptr_i] = ft_strndup(&s[i], count_n);
+			if (!ptr[ptr_i])
+				return (free_array(ptr));
 			i += count_n;
 			ptr_i++;
 		}
@@ -84,6 +94,7 @@ void	fill_array(char **ptr, const char *s, char c)
 			i++;
 	}
 	ptr[ptr_i] = NULL;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -101,6 +112,7 @@ char	**ft_split(char const *s, char c)
 	ptr = malloc((count + 1) * sizeof(char *));
 	if (!ptr)
 		return (NULL);
-	fill_array(ptr, s, c);
+	if (!fill_array(ptr, s, c))
+		return (NULL);
 	return (ptr);
 }
