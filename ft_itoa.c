@@ -6,12 +6,12 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 00:43:15 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/19 16:34:11 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:15:43 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
 
-static int	get_pow_count(int *count, long int m)
+static int	get_pow_count(int *count, long m)
 {
 	int	pow;
 
@@ -27,9 +27,9 @@ static int	get_pow_count(int *count, long int m)
 static void	fill_array(char *ptr, int n, int pow)
 {
 	int			i;
-	long int	m;
+	long		m;
 
-	m = (long int)n;
+	m = (long)n;
 	i = 0;
 	if (n < 0)
 	{
@@ -39,7 +39,7 @@ static void	fill_array(char *ptr, int n, int pow)
 	}
 	while (pow > 0)
 	{
-		ptr[i] = (char)((m / pow) + '0');
+		ptr[i] = (m / pow) + '0';
 		m %= pow;
 		pow /= 10;
 		i++;
@@ -49,13 +49,13 @@ static void	fill_array(char *ptr, int n, int pow)
 
 char	*ft_itoa(int n)
 {
-	long int	m;
+	long		m;
 	int			count;
 	int			pow;
 	char		*ptr;
 
 	count = 1;
-	m = (long int)n;
+	m = (long)n;
 	if (m < 0)
 	{
 		count++;

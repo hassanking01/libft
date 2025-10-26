@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:28:02 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/17 17:15:36 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:50:31 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	ptr = (unsigned char *)s;
 	while (i < n)
 	{
-		*ptr++ = (unsigned char)c;
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
 	return (s);

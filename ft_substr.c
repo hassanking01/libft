@@ -6,12 +6,10 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:12:54 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/24 11:44:37 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 21:12:55 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static void	fill_array(char *result, const char *s, size_t len)

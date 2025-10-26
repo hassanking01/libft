@@ -6,11 +6,11 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:52:37 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/24 11:51:59 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 21:05:50 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

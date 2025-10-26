@@ -6,12 +6,10 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:18:31 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/24 11:49:22 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 21:12:22 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 static int	is_from_set(char const *set, char check)
 {

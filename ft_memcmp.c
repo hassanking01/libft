@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 09:36:09 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/20 13:53:16 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:35:28 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (s1_ptr[i] != s2_ptr[i])
-			return ((int)s1_ptr[i] - (int)s2_ptr[i]);
+			return ((int)(s1_ptr[i] - s2_ptr[i]));
 		i++;
 	}
 	return (0);

@@ -6,12 +6,10 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:55:22 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/25 13:59:31 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:56:06 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 static char	*ft_strndup(const char *s, size_t	n)
 {
@@ -66,6 +64,7 @@ static int	free_array(char **ptr)
 	i = 0;
 	while (ptr[i])
 		free(ptr[i++]);
+	free(ptr);
 	return (0);
 }
 

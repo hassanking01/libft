@@ -6,11 +6,9 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:02:20 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/21 17:33:42 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:52:31 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
@@ -19,8 +17,5 @@ void	ft_putstr_fd(char *s, int fd)
 
 	i = 0;
 	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+		ft_putchar_fd(s[i++], fd);
 }

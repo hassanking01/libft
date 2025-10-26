@@ -6,11 +6,10 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 00:06:23 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/23 17:41:47 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:24:45 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

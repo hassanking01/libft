@@ -6,12 +6,13 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 11:50:20 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/20 14:03:16 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/25 17:48:57 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {

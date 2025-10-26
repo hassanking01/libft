@@ -6,7 +6,7 @@
 /*   By: hahchtar <hahchtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 13:49:27 by hahchtar          #+#    #+#             */
-/*   Updated: 2025/10/22 10:04:13 by hahchtar         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:36:06 by hahchtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -22,7 +22,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*d_ptr++ = *s_ptr++;
+		d_ptr[i] = s_ptr[i];
 		i++;
 	}
 	return (dest);
